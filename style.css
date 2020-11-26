@@ -79,6 +79,15 @@ p.info {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
+.scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
 /* segment *****main navigation***** */
 nav.main-nav,
 nav.main-nav ul.nav-links {
@@ -109,18 +118,17 @@ nav.main-nav .nav-links-wrapper {
   height: 100vh;
   background: linear-gradient(
     to bottom,
-    hsla(233, 26%, 24%, 0.5),
+    hsl(233, 26%, 24%),
     hsla(0, 0%, 100%, 0.2)
   );
   padding: 1.5rem 6%;
-  display: none;
 }
 
 nav.main-nav ul.nav-links {
   background-color: var(--white);
   flex-flow: column wrap;
   border-radius: 5px;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 nav.main-nav ul.nav-links li {
