@@ -2,6 +2,7 @@
 const bodyEl = document.querySelector("body");
 const mobileNav = document.getElementById("mobile-nav");
 const mobileNavToggle = document.getElementById("mobile-nav-toggle");
+const navLinksContainer = document.getElementById("nav-links");
 
 /* *****functions***** */
 function displayMobileNav() {
@@ -23,10 +24,18 @@ function hideMobileNav() {
 }
 
 /* *****event listeners***** */
+// mobile navigation toggle
 mobileNavToggle.addEventListener("click", () => {
   if (mobileNavToggle.classList.contains("fa-bars")) {
     displayMobileNav();
   } else {
+    hideMobileNav();
+  }
+});
+
+// navigation links fake functionality
+navLinksContainer.addEventListener("click", (e) => {
+  if (e.target.className === "nav-link-anchor") {
     hideMobileNav();
   }
 });
