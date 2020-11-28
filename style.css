@@ -295,3 +295,246 @@ nav.footer-nav li {
   font-size: 0.8rem;
   margin-top: 2rem;
 }
+
+/* *****media queries***** */
+@media screen and (min-width: 1430px) {
+  a.btn-request-invite {
+    transition: all 0.3s;
+  }
+
+  a.btn-request-invite:focus,
+  a.btn-request-invite:hover {
+    filter: brightness(125%);
+    -webkit-filter: brightness(125%);
+  }
+
+  p.info {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  /* segment *****main navigation***** */
+  nav.main-nav {
+    padding: 1.5rem 10%;
+    width: 100%;
+  }
+
+  .btn-nav {
+    display: block;
+  }
+
+  nav.main-nav .nav-links-wrapper {
+    width: max-content;
+    position: static;
+    top: 0;
+    left: unset;
+    right: unset;
+    height: max-content;
+    background: transparent;
+    padding: 0;
+    display: block;
+  }
+
+  nav.main-nav ul.nav-links {
+    background-color: transparent;
+    flex-flow: row nowrap;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  nav.main-nav ul.nav-links li {
+    padding: 0 1.5rem;
+  }
+
+  nav.main-nav ul.nav-links li a {
+    color: var(--grayish-blue);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  nav.main-nav ul.nav-links li a:hover {
+    color: var(--dark-blue);
+    transition: all 0.3s ease;
+  }
+
+  nav.main-nav ul.nav-links li a:hover:after {
+    content: "";
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 265%;
+    left: 0;
+    background: linear-gradient(
+      to right,
+      var(--lime-green),
+      var(--bright-cyan)
+    );
+  }
+
+  nav.main-nav .mobile-nav-toggle {
+    display: none;
+  }
+
+  /* segment *****intro***** */
+  header.intro {
+    background: url("./images/bg-intro-desktop.svg") 250% 65% / 80% no-repeat;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 10%;
+  }
+
+  .bg-intro {
+    display: none;
+  }
+
+  .intro-img-container {
+    padding: 0;
+    position: absolute;
+    top: -19%;
+    right: -8%;
+    width: 45%;
+  }
+
+  .intro-txt {
+    padding: 2rem 0 5rem;
+    order: -1;
+    width: 35%;
+    text-align: left;
+  }
+
+  .intro-info {
+    padding-bottom: 2.5rem;
+  }
+
+  .main-heading {
+    font-size: 3.2rem;
+  }
+
+  /* segment *****features***** */
+  .section-features {
+    text-align: left;
+    padding: 4rem 10% 3rem;
+  }
+
+  .features-info {
+    width: 50%;
+  }
+
+  .features {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .feature {
+    width: 22%;
+  }
+
+  .feature-icon {
+    margin: 0;
+  }
+
+  /* segment *****news***** */
+  .section-news {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(4, 23%);
+    gap: 0 2.6666%;
+    padding: 5rem 10% 4rem;
+  }
+
+  .news-article {
+    padding-bottom: 1rem;
+    transition: 0.3s ease;
+  }
+
+  .news-article:hover {
+    transform: scale(1.009);
+  }
+
+  .news-article:first-child img.article-img {
+    height: 72.83%;
+  }
+
+  .news-heading {
+    grid-area: 1 / 1 / auto / span 4;
+    padding-bottom: 2rem;
+  }
+
+  p.article-preview {
+    font-size: 1rem;
+    padding-bottom: 0;
+  }
+
+  /* segment *****footer***** */
+  footer {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 2rem 8%;
+    text-align: left;
+  }
+
+  .footer-logo {
+    grid-area: 1 / 1 / 1 / span 2;
+  }
+
+  .social-media {
+    grid-area: 3 / 1 / 4 / span 2;
+  }
+
+  .social-media i {
+    font-size: 1.1rem;
+  }
+
+  .social-media i:last-child {
+    margin-right: 0;
+  }
+
+  nav.footer-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    grid-area: 1 / 4 / 4 / span 3;
+    padding: 0;
+  }
+
+  .social-media i,
+  nav.footer-nav li.nav-link a {
+    transition: all 0.3s;
+  }
+
+  .social-media i:hover,
+  nav.footer-nav li.nav-link a:hover {
+    color: var(--lime-green);
+  }
+
+  .btn-footer {
+    grid-area: 1 / 9 / 2 / 11;
+    height: max-content;
+    width: max-content;
+  }
+
+  .copy {
+    grid-area: 2 / 8 / 3 / 11;
+    margin-top: 2rem;
+  }
+
+  .btn-footer,
+  .copy {
+    justify-self: flex-end;
+    align-self: center;
+    margin-top: 0;
+  }
+}
